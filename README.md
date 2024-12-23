@@ -1,2 +1,25 @@
 # Exploring grid sensitivity in an ice sheet model: a case study of the Amery Ice Shelf https://doi.org/10.1016/j.accre.2024.12.001
-The dynamics of the Antarctic ice sheet are key factors affecting global climate change. To project future sea level changes, ice sheet models are developed based on a discrete grid system, which profoundly impacts the accuracy of numerical simulations. To comprehensively explore the sensitivity of ice modeling performance to grid resolution, this study focused on the Amery Ice Shelf (AmIS), the largest glacial flow system in east Antarctica. Using ten grid resolutions (nine sets of structured grids ranging from 2‒30 km and one set of adaptive unstructured grid from 1‒20 km), we conducted a series of inversion experiments and diagnostic perturbation tests. Our findings reveal a high sensitivity of both inversion parameters, the rate factor A and basal slipperiness C, as well as Grounding Line Flux (GLF) and Volume Above Floatation (VAF), to the grid resolution. We observed that for the AmIS, grid resolutions coarser than 10 km in our model introduce considerable noise and reduce the ability to capture realistic dynamic processes. Additionally, we found that the inversion parameters were transferable between grid systems of different resolutions, and the AmIS exhibited a consistent response to idealized collapse scenarios across these grid systems, particularly for grids with a resolution of 10 km or finer. This study extends the previous ice sheet model intercomparison experiments from synthetic topography to realistic geometry and provides insights for future ice modeling studies on grid systems configurations.
+# What's this?
+These are the scripts used to compute data and produce figures for the paper:
+Qian-Xi Wang, Teng Li, Xiao Cheng, Chen Zhao, Lei Zheng, Qi Liang (2024), Exploring grid sensitivity in an ice sheet model: A case study of the Amery Ice Shelf, Advances in Climate Change Research. https://doi.org/10.1016/j.accre.2024.12.001.(https://www.sciencedirect.com/science/article/pii/S1674927824001783)
+# Unstructured Grid File
+File Location: Grid_Sensitivity/Mesh
+Purpose: This file contains the unstructured grid system used to enhance the simulation of the Amery Ice Shelf. The grid is designed to adaptively adjust its resolution to provide a more detailed representation of the ice sheet's complex geometry and dynamics, particularly in critical glacial flow areas.
+Key Features:
+Adaptive Resolution: Automatically refines grid resolution in areas of interest for improved accuracy.
+High Precision in Key Areas: Offers enhanced detail within 20 km downstream of the grounding line, essential for simulating ice sheet margins.
+Efficiency: Balances computational efficiency with the precision of glacial dynamic representation.
+# Inversion Model Parameter File
+File Location: Grid_Sensitivity/Experiment_Setup
+Purpose: This file includes the settings and configurations for the inversion experiments conducted in the study. It defines the parameters and conditions used to evaluate the sensitivity of inversion parameters to grid resolution and assess the transferability of these parameters across different grid resolutions.
+Key Components:
+Parameter Definitions: Specifies the rate factor A and basal slipperiness coefficient C used in the model.
+Grid Resolution Sensitivity: Contains the setups for experiments that test how changes in grid resolution affect model outcomes.
+Transferability Assessment: Setups for experiments that determine if inversion parameters can be transferred between grid systems of different resolutions.
+# Calving Model Parameter File
+File Location: Grid_Sensitivity/Calve
+Purpose: This file contains the model parameter settings related to the ice sheet's response to idealized calving scenarios. It is used to investigate the consistent response of the Antarctic Ice Sheet to hypothetical collapse situations.
+Key Focus Areas:
+Calving Scenarios: Parameters that simulate the effects of ice shelf calving on the ice sheet's dynamics.
+Buttressing Effect: Settings that help assess the impact of ice shelf buttressing on the grounded ice.
+Response Consistency: Configurations that test the model's response to different calving events and their implications for ice sheet stability.
